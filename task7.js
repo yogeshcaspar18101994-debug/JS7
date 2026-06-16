@@ -81,14 +81,19 @@ function applyDiscount(originalPrice, discountPercentage, callback) {
 }
 applyDiscount(200, 15, generateInvoice);
 
-// Task 10: Online Exam System
+// Task 8: Promotional Offers
 
-const scienceStudents = ["Riya", "Raju"];
-const commerceStudents = ["Sidd", "Devi"];
-const allStudents = [...scienceStudents, ...commerceStudents];
-
-console.log(allStudents);
-
+function* offerGenerator() {
+  yield "10% OFF";
+  yield "20% OFF";
+  yield "Free Delivery";
+  yield "Buy 1 Get 1";
+}
+const getOffer = offerGenerator();
+console.log(getOffer.next().value); 
+console.log(getOffer.next().value); 
+console.log(getOffer.next().value); 
+console.log(getOffer.next().value); 
 
 // Task 9: Student Database Merge
 
